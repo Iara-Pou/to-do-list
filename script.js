@@ -58,8 +58,9 @@ function validarInput() {
 //funcion manejarErrores que se encargue de mostrarlos en un div.
 //funcion crear item, afuera de validar input.
 
-const $tareaNueva = document.querySelector(".input").value;
+let $input = document.querySelector(".input");
 
 const $agregar = document.querySelector(".boton-agregar");
 //
 $agregar.onclick = validarInput;
+    const tareaNueva = $input.value;

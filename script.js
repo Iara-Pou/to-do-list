@@ -1,6 +1,7 @@
 function crearContenedor() {
     let divNuevo = document.createElement("div");
     divNuevo.classList.add("item");
+    return divNuevo;
 }
 
 function crearInput(nuevaTarea) {
@@ -9,6 +10,7 @@ function crearInput(nuevaTarea) {
     inputItem.disabled = "true";
     inputItem.classList.add("item-input");
     inputItem.value = nuevaTarea;
+    return inputItem;
 }
 
 function crearBotonEditar() {
@@ -16,6 +18,7 @@ function crearBotonEditar() {
     botonEditar.innerHTML = "<i class='fas fa-lock'></i>";
     botonEditar.classList.add("boton-editar");
 
+    return botonEditar;
 }
 
 function crearBotonRemover() {
@@ -23,6 +26,7 @@ function crearBotonRemover() {
     botonRemover.innerHTML = "<i class='fas fa-trash'></i>";
     botonRemover.classList.add("boton-remover");
     botonRemover.onclick = eliminarContenedorTarea;
+    return botonRemover;
 }
 function eliminarContenedorTarea(event) {
     const $contenedor = event.target.parentNode;

@@ -42,8 +42,13 @@ function agregar(nuevaTarea) {
     divNuevo.appendChild(botonEditar);
     divNuevo.appendChild(botonRemover);
 
-    let container = document.querySelector(".container");
-    container.appendChild(divNuevo);
+    $contenedorTareaNueva.appendChild($input);
+    $contenedorTareaNueva.appendChild($botonEditar);
+    $contenedorTareaNueva.appendChild($botonRemover);
+
+    let $contenedorTareas = document.querySelector("#contenedor-tareas");
+    $contenedorTareas.appendChild($contenedorTareaNueva);
+    
 }
 
 function crearInput(nuevaTarea) {

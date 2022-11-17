@@ -56,13 +56,13 @@ function crearInput(nuevaTarea) {
     inputItem.value = nuevaTarea;
 }
 //validarInput --> mejor si hiciera un return de un string.
-function chequearInput() {
-    if ($input.value === "") {
-        alert("No ingresaste nada!")
-    } else {
-        new Item($input.value)
-        $input.value = ""
 function validarInput() {
+    if ($tareaNueva.value === "") {
+        return "El campo no debe estar vacío."
+    } else if ($tareaNueva.length > 30){
+        return "El campo debe tener menos que 30 carácteres."
+    }else {
+        return "";
     }
 }
 //funcion manejarErrores que se encargue de mostrarlos en un div.

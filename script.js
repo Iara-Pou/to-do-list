@@ -1,13 +1,12 @@
 function crearContenedor() {
-    let divNuevo = document.createElement("div");
+    const divNuevo = document.createElement("div");
     divNuevo.classList.add("item");
     return divNuevo;
 }
 
 function crearInput(nuevaTarea) {
     let inputItem = document.createElement("input");
-
-    inputItem.disabled = "true";
+    inputItem.disabled = true;
     inputItem.classList.add("item-input");
     inputItem.value = nuevaTarea;
     return inputItem;
@@ -21,16 +20,19 @@ function crearBotonEditar() {
     return botonEditar;
 }
 
+    }
 function crearBotonRemover() {
+
     let botonRemover = document.createElement("button");
     botonRemover.innerHTML = "<i class='fas fa-trash'></i>";
     botonRemover.classList.add("boton-remover");
     botonRemover.onclick = eliminarContenedorTarea;
+
     return botonRemover;
 }
-function eliminarContenedorTarea(event) {
-    const $contenedor = event.target.parentNode;
-    $contenedor.remove()
+
+function eliminarContenedorTarea() {
+    this.parentNode.remove()
 }
 
 function validar(textoTarea) {

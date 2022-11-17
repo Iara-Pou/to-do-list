@@ -55,12 +55,16 @@ function validarInput() {
         return "";
     }
 }
+
+
 //funcion manejarErrores que se encargue de mostrarlos en un div.
 //funcion crear item, afuera de validar input.
 
 let $input = document.querySelector(".input");
 
 const $agregar = document.querySelector(".boton-agregar");
-//
-$agregar.onclick = validarInput;
+$agregar.onclick = manejarErrores;
+
+function manejarErrores(){
     const tareaNueva = $input.value;
+    }

@@ -45,7 +45,7 @@ function agregar(nuevaTarea) {
 
     let $contenedorTareas = document.querySelector("#contenedor-tareas");
     $contenedorTareas.appendChild($contenedorTareaNueva);
-    
+
 }
 
 function crearInput(nuevaTarea) {
@@ -67,7 +67,7 @@ function chequearInput() {
 //funcion manejarErrores que se encargue de mostrarlos en un div.
 //funcion crear item, afuera de validar input.
 
-let $input = document.querySelector(".input");
+const $tareaNueva = document.querySelector(".input").value;
 
 const $agregar = document.querySelector(".boton-agregar");
 $agregar.onclick = chequearInput;

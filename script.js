@@ -56,7 +56,7 @@ function crearInput(nuevaTarea) {
     inputItem.classList.add("item-input");
     inputItem.value = nuevaTarea;
 }
-//validarInput --> mejor si hiciera un return de un string.
+
 function validarInput() {
     if ($tareaNueva.value === "") {
         return "El campo no debe estar vacío."

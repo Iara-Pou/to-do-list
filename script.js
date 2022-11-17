@@ -62,6 +62,7 @@ function chequearInput() {
     } else {
         new Item($input.value)
         $input.value = ""
+function validarInput() {
     }
 }
 //funcion manejarErrores que se encargue de mostrarlos en un div.
@@ -70,4 +71,5 @@ function chequearInput() {
 const $tareaNueva = document.querySelector(".input").value;
 
 const $agregar = document.querySelector(".boton-agregar");
-$agregar.onclick = chequearInput;
+//
+$agregar.onclick = validarInput;

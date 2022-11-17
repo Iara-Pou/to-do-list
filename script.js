@@ -2,6 +2,7 @@ class Item {
     constructor(nuevaTarea) {
         this.crearDiv(nuevaTarea)
     }
+    
     crearDiv(nuevaTarea) {
         let inputItem = document.createElement("input");
 
@@ -58,4 +59,3 @@ function chequearInput() {
 let $input = document.querySelector(".input");
 const $agregar = document.querySelector(".boton-agregar");
 $agregar.addEventListener("click", chequearInput);
-

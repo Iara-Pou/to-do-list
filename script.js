@@ -33,14 +33,11 @@ function crearContenedor() {
 }
 
 function agregar(nuevaTarea) {
-    crearContenedor();
-    crearInput(nuevaTarea);
-    crearBotonEditar();
-    crearBotonRemover();
 
-    divNuevo.appendChild(inputItem);
-    divNuevo.appendChild(botonEditar);
-    divNuevo.appendChild(botonRemover);
+    const $contenedorTareaNueva = crearContenedor();
+    const $input = crearInput(nuevaTarea);
+    const $botonEditar = crearBotonEditar();
+    const $botonRemover = crearBotonRemover();
 
     $contenedorTareaNueva.appendChild($input);
     $contenedorTareaNueva.appendChild($botonEditar);

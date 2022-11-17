@@ -46,8 +46,8 @@ function agregar(nuevaTarea) {
 
 
 
-function validarInput() {
-    if ($tareaNueva.value === "") {
+function validar(textoTarea) {
+    if (textoTarea === "") {
         return "El campo no debe estar vacío."
     } else if ($tareaNueva.length > 30){
         return "El campo debe tener menos que 30 carácteres."

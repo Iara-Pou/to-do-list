@@ -4,6 +4,7 @@ class Item {
     }
     crearDiv(nuevaTarea) {
         let inputItem = document.createElement("input");
+
         inputItem.disabled = "true";
         inputItem.classList.add("item-input");
         inputItem.value = nuevaTarea;
@@ -54,7 +55,7 @@ function chequearInput() {
             input.value = ""}
     }
 
-let input = document.querySelector(".input");
-let agregar = document.querySelector(".boton-agregar");
-agregar.addEventListener("click", chequearInput);
+let $input = document.querySelector(".input");
+const $agregar = document.querySelector(".boton-agregar");
+$agregar.addEventListener("click", chequearInput);
 

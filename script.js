@@ -65,6 +65,15 @@ let $input = document.querySelector(".input");
 const $agregar = document.querySelector(".boton-agregar");
 $agregar.onclick = manejarErrores;
 
-function manejarErrores(){
-    const tareaNueva = $input.value;
+function manejarErrores() {
+    const tarea = $input.value;
+    const cumpleRequisitos = validar(tarea) === "";
+
+    if (cumpleRequisitos) {
+        agregar(tarea);
+    } else {
+        const textoError = validar(tarea);
+        mostrarError(textoError);
     }
+
+}

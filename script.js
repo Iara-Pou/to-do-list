@@ -9,6 +9,7 @@ function crearBotonRemover() {
     let botonRemover = document.createElement("button");
     botonRemover.innerHTML = "<i class='fas fa-trash'></i>";
     botonRemover.classList.add("boton-remover");
+    botonRemover.onclick = eliminarContenedorTarea;
 }
 
 botonEditar.addEventListener("click", function () {
@@ -21,11 +22,11 @@ botonEditar.addEventListener("click", function () {
         inputItem.disabled = true;
     }
 })
+function eliminarContenedorTarea(event){
+    const contenedor = event.target.parentNode;
+    contenedor.remove()
+}
 
-botonRemover.addEventListener("click", function () {
-    divNuevo.remove()
-    //esto podría ser con lo de e.target.parentNode
-})
 
 function crearContenedor() {
     let divNuevo = document.createElement("div");

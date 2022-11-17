@@ -57,5 +57,6 @@ function chequearInput() {
     }
 
 let $input = document.querySelector(".input");
+
 const $agregar = document.querySelector(".boton-agregar");
-$agregar.addEventListener("click", chequearInput);
+$agregar.onclick = chequearInput;

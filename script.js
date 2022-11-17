@@ -1,60 +1,69 @@
-class Item {
-    constructor(nuevaTarea) {
-        this.crearDiv(nuevaTarea)
+function crearBotonEditar() {
+    let botonEditar = document.createElement("button");
+    botonEditar.innerHTML = "<i class='fas fa-lock'></i>";
+    botonEditar.classList.add("boton-editar");
+
+}
+
+function crearBotonRemover() {
+    let botonRemover = document.createElement("button");
+    botonRemover.innerHTML = "<i class='fas fa-trash'></i>";
+    botonRemover.classList.add("boton-remover");
+}
+
+botonEditar.addEventListener("click", function () {
+    if (inputItem.disabled === true) {
+        //cambiar las clases con classList y no con innerHTML
+        botonEditar.innerHTML = "<i class='fas fa-lock-open'></i></i>";
+        inputItem.disabled = false;
+    } else {
+        botonEditar.innerHTML = "<i class='fas fa-lock'></i></i>";
+        inputItem.disabled = true;
     }
-    
-    crearDiv(nuevaTarea) {
-        let inputItem = document.createElement("input");
+})
 
-        inputItem.disabled = "true";
-        inputItem.classList.add("item-input");
-        inputItem.value = nuevaTarea;
+botonRemover.addEventListener("click", function () {
+    divNuevo.remove()
+    //esto podría ser con lo de e.target.parentNode
+})
 
-        let divNuevo = document.createElement("div");
-        divNuevo.classList.add("item");
+function crearContenedor() {
+    let divNuevo = document.createElement("div");
+    divNuevo.classList.add("item");
+}
 
-        //boton editar, candado
-        let botonEditar = document.createElement("button");
-        botonEditar.innerHTML = "<i class='fas fa-lock'></i>";
-        botonEditar.classList.add("boton-editar");
+function agregar(nuevaTarea) {
+    crearContenedor();
+    crearInput(nuevaTarea);
+    crearBotonEditar();
+    crearBotonRemover();
 
-        //boton  remover, tacho
-        let botonRemover = document.createElement("button");
-        botonRemover.innerHTML = "<i class='fas fa-trash'></i>";
-        botonRemover.classList.add("boton-remover");
+    divNuevo.appendChild(inputItem);
+    divNuevo.appendChild(botonEditar);
+    divNuevo.appendChild(botonRemover);
 
-        divNuevo.appendChild(inputItem);
-        divNuevo.appendChild(botonEditar);
-        divNuevo.appendChild(botonRemover);
+    let container = document.querySelector(".container");
+    container.appendChild(divNuevo);
+}
 
-        let container = document.querySelector(".container");
-        container.appendChild(divNuevo);
+function crearInput(nuevaTarea) {
+    let inputItem = document.createElement("input");
 
-
-        botonEditar.addEventListener("click", function () {
-            if (inputItem.disabled === true) {
-                botonEditar.innerHTML = "<i class='fas fa-lock-open'></i></i>";
-                inputItem.disabled = false;
-            } else {
-                botonEditar.innerHTML = "<i class='fas fa-lock'></i></i>";
-                inputItem.disabled = true;
-            }
-        })
-
-        botonRemover.addEventListener("click", function () {
-            divNuevo.remove()
-        })
-
-
+    inputItem.disabled = "true";
+    inputItem.classList.add("item-input");
+    inputItem.value = nuevaTarea;
+}
+//validarInput --> mejor si hiciera un return de un string.
+function chequearInput() {
+    if ($input.value === "") {
+        alert("No ingresaste nada!")
+    } else {
+        new Item($input.value)
+        $input.value = ""
     }
 }
-function chequearInput() {
-        if ($input.value === "") {
-            alert("No ingresaste nada!")
-        } else {
-            new Item ($input.value)
-            $input.value = ""}
-    }
+//funcion manejarErrores que se encargue de mostrarlos en un div.
+//funcion crear item, afuera de validar input.
 
 let $input = document.querySelector(".input");
 

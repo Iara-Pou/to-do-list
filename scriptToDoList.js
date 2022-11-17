@@ -48,11 +48,11 @@ class Item {
     }
 }
 function chequearInput() {
-        if (input.value === "") {
+        if ($input.value === "") {
             alert("No ingresaste nada!")
         } else {
-            new Item (input.value)
-            input.value = ""}
+            new Item ($input.value)
+            $input.value = ""}
     }
 
 let $input = document.querySelector(".input");

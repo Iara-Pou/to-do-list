@@ -24,41 +24,20 @@ function crearBotonRemover() {
     botonRemover.classList.add("boton-remover");
     botonRemover.onclick = eliminarContenedorTarea;
 }
-function eliminarContenedorTarea(event){
+function eliminarContenedorTarea(event) {
     const $contenedor = event.target.parentNode;
     $contenedor.remove()
 }
 
-function agregar(nuevaTarea) {
-    const $contenedorTareaNueva = crearContenedor();
-    const $input = crearInput(nuevaTarea);
-    const $botonEditar = crearBotonEditar();
-    const $botonRemover = crearBotonRemover();
-
-    $contenedorTareaNueva.appendChild($input);
-    $contenedorTareaNueva.appendChild($botonEditar);
-    $contenedorTareaNueva.appendChild($botonRemover);
-
-    const $contenedorTareas = document.querySelector("#contenedor-tareas");
-    $contenedorTareas.appendChild($contenedorTareaNueva);
-
-}
-
-
-
 function validar(textoTarea) {
     if (textoTarea === "") {
         return "El campo no debe estar vacío."
-    } else if ($tareaNueva.length > 30){
+    } else if (textoTarea.length > 30) {
         return "El campo debe tener menos que 30 carácteres."
-    }else {
+    } else {
         return "";
     }
 }
-
-
-//funcion manejarErrores que se encargue de mostrarlos en un div.
-//funcion crear item, afuera de validar input.
 
 let $input = document.querySelector(".input");
 
@@ -77,3 +56,19 @@ function manejarErrores() {
     }
 
 }
+
+function agregar(nuevaTarea) {
+    const $contenedorTareaNueva = crearContenedor();
+    const $input = crearInput(nuevaTarea);
+    const $botonEditar = crearBotonEditar();
+    const $botonRemover = crearBotonRemover();
+
+    $contenedorTareaNueva.appendChild($input);
+    $contenedorTareaNueva.appendChild($botonEditar);
+    $contenedorTareaNueva.appendChild($botonRemover);
+
+    const $contenedorTareas = document.querySelector("#contenedor-tareas");
+    $contenedorTareas.appendChild($contenedorTareaNueva);
+
+}
+

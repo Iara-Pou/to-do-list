@@ -23,8 +23,8 @@ botonEditar.addEventListener("click", function () {
     }
 })
 function eliminarContenedorTarea(event){
-    const contenedor = event.target.parentNode;
-    contenedor.remove()
+    const $contenedor = event.target.parentNode;
+    $contenedor.remove()
 }
 
 

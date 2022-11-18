@@ -20,7 +20,18 @@ function crearBotonEditar() {
     return botonEditar;
 }
 
+function editarContenido(input, boton) {
+
+    const inputEstaBloqueado = input.disabled === true;
+    
+    if (inputEstaBloqueado) {
+        boton.innerHTML = "<i class='fas fa-lock-open'></i></i>";
+        input.disabled = false;
+
+    } else {
+        manejarErroresCambios (input, boton);       
     }
+}
 function crearBotonRemover() {
 
     let botonRemover = document.createElement("button");

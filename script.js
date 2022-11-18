@@ -104,12 +104,19 @@ function agregar(nuevaTarea) {
 }
 
 function mostrarError(error) {
+    vaciarErroresAnteriores();
+
     const $contenedorErrores = document.querySelector("#contenedor-errores");
     $contenedorErrores.classList.remove("oculto");
 
     const $mensaje = document.createElement("p");
     $mensaje.textContent = error;
     $contenedorErrores.appendChild($mensaje);
+}
+
+function vaciarErroresAnteriores(){
+    const $contenedorErrores = document.querySelector("#contenedor-errores");
+    $contenedorErrores.innerHTML = "";
 }
 
 

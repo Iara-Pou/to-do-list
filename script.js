@@ -104,5 +104,12 @@ function agregar(nuevaTarea) {
 }
 
 function mostrarError(error) {
-    alert(error);
+    const $contenedorErrores = document.querySelector("#contenedor-errores");
+    $contenedorErrores.classList.remove("oculto");
+
+    const $mensaje = document.createElement("p");
+    $mensaje.textContent = error;
+    $contenedorErrores.appendChild($mensaje);
 }
+
+

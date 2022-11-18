@@ -39,6 +39,7 @@ function manejarErroresCambios (input, boton){
     const cumpleRequisitos = validar(tareaNueva) === "";
 
     if(cumpleRequisitos){
+        esconderMensajeError();
         boton.innerHTML = "<i class='fas fa-lock'></i></i>";
         input.disabled = true;
     } else {
@@ -81,6 +82,7 @@ function manejarErrores() {
     const cumpleRequisitos = validar(tarea) === "";
 
     if (cumpleRequisitos) {
+        esconderMensajeError();
         agregar(tarea);
     } else {
         const textoError = validar(tarea);
@@ -117,6 +119,11 @@ function mostrarError(error) {
 function vaciarErroresAnteriores(){
     const $contenedorErrores = document.querySelector("#contenedor-errores");
     $contenedorErrores.innerHTML = "";
+}
+
+function esconderMensajeError (){
+    const $contenedorErrores = document.querySelector("#contenedor-errores");
+    $contenedorErrores.classList.add("oculto");
 }
 
 

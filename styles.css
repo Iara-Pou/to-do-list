@@ -9,6 +9,20 @@ h1{
     color: white;
 }
 
+#contenedor-errores{
+    background-color:rgb(255, 6, 46);
+    border-radius: 10px;
+    width: 70%;
+    padding: 1rem;
+    margin: 1rem auto;
+    color: white;
+    font-weight: bold;
+}
+
+.oculto{
+    display: none;
+}
+
 .input{
     width: 450px;
     height: 60px; 

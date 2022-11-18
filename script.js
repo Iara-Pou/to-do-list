@@ -103,3 +103,6 @@ function agregar(nuevaTarea) {
     $contenedorTareas.appendChild($contenedorTareaNueva);
 }
 
+function mostrarError(error) {
+    alert(error);
+}

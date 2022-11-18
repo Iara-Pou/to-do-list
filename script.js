@@ -32,6 +32,21 @@ function editarContenido(input, boton) {
         manejarErroresCambios (input, boton);       
     }
 }
+
+function manejarErroresCambios (input, boton){
+
+    const tareaNueva = input.value;
+    const cumpleRequisitos = validar(tareaNueva) === "";
+
+    if(cumpleRequisitos){
+        boton.innerHTML = "<i class='fas fa-lock'></i></i>";
+        input.disabled = true;
+    } else {
+        mostrarError(validar(tareaNueva));
+    }
+
+}
+
 function crearBotonRemover() {
 
     let botonRemover = document.createElement("button");
@@ -86,6 +101,5 @@ function agregar(nuevaTarea) {
 
     const $contenedorTareas = document.querySelector("#contenedor-tareas");
     $contenedorTareas.appendChild($contenedorTareaNueva);
-
 }
 

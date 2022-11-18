@@ -12,11 +12,11 @@ function crearInput(nuevaTarea) {
     return inputItem;
 }
 
-function crearBotonEditar() {
+function crearBotonEditar(inputAEditar) {
     let botonEditar = document.createElement("button");
     botonEditar.innerHTML = "<i class='fas fa-lock'></i>";
     botonEditar.classList.add("boton-editar");
-
+    botonEditar.onclick = () => editarContenido(inputAEditar, botonEditar);
     return botonEditar;
 }
 
@@ -77,7 +77,7 @@ function manejarErrores() {
 function agregar(nuevaTarea) {
     const $contenedorTareaNueva = crearContenedor();
     const $input = crearInput(nuevaTarea);
-    const $botonEditar = crearBotonEditar();
+    const $botonEditar = crearBotonEditar($input);
     const $botonRemover = crearBotonRemover();
 
     $contenedorTareaNueva.appendChild($input);

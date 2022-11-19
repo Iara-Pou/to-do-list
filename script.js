@@ -59,10 +59,10 @@ function crearBotonRemover() {
 }
 
 function eliminarContenedorTarea() {
-    const $contenedorTareas = document.querySelector("#contenedor-tareas");
-    
+    const $seccionTareas = document.querySelector("#contenedor-tareas");
+
     this.parentNode.remove();
-    if ($contenedorTareas.innerHTML === ""){
+    if ($seccionTareas.innerHTML === ""){
         esconderMensajeError();
     }
 }

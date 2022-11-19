@@ -9,6 +9,20 @@ h1{
     color: white;
 }
 
+#contenedor-errores{
+    background-color:rgb(255, 6, 46);
+    border-radius: 10px;
+    width: 70%;
+    padding: 1rem;
+    margin: 1rem auto;
+    color: white;
+    font-weight: bold;
+}
+
+.oculto{
+    display: none;
+}
+
 .input{
     width: 450px;
     height: 60px; 
@@ -53,6 +67,7 @@ color: #62d0ff;
 font-size: 1.4rem;
 font-family: Montserrat, sans-serif;
 }
+
 .boton-remover{
     height: 50px;
     width: 50px;
@@ -64,5 +79,6 @@ font-family: Montserrat, sans-serif;
     font-size: 20px;  
 }
 
-
-
+#container{
+    margin: 0 8%;
+}

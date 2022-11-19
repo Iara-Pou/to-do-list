@@ -6,22 +6,28 @@
     <title>To-Do List</title>
     <script src="https://kit.fontawesome.com/ba0ece2d64.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="stylesheetToDoList.css">
+    <link rel="stylesheet" href="./styles.css">
     <link rel="shortcut icon" href="1651793780.ico">
 
 </head>
-
-<body>
-
-    <h1>COSAS PARA HACER</h1>
-    <div class="input-div">
-        <input class="input" type="text" placeholder="Tarea a agregar"> 
-        <button class="boton-agregar"> <i class="fa-solid fa-plus"></i> </button>
-    </div>
-    <div class="container"></div>
-    </div>
-
-    <script src="scriptToDoList.js"></script>
-</body>
-
+<div id="container">
+    <body>
+        <header>
+            <h1>COSAS PARA HACER</h1>
+        </header>
+        <section>
+            <div class="input-div">
+                <input class="input" type="text" placeholder="Tarea a agregar">
+                <button class="boton-agregar"> <i class="fa-solid fa-plus"></i> </button>
+            </div>
+        </section>
+        <section>
+            <div id="contenedor-errores" class="oculto"></div>
+            </div>
+            <div id="contenedor-tareas"></div>
+            </div>
+        </section>
+        <script src="./script.js"></script>
+    </body>
+</div>
 </html>

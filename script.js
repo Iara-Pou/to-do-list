@@ -125,7 +125,7 @@ function manejarErrores() {
     }
 }
 
-let $input = document.querySelector(".input");
+let $input = document.querySelector("#input");
 
-const $agregar = document.querySelector(".boton-agregar");
+const $agregar = document.querySelector("#boton-agregar");
 $agregar.onclick = manejarErrores;

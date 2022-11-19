@@ -59,7 +59,12 @@ function crearBotonRemover() {
 }
 
 function eliminarContenedorTarea() {
-    this.parentNode.remove()
+    const $contenedorTareas = document.querySelector("#contenedor-tareas");
+    
+    this.parentNode.remove();
+    if ($contenedorTareas.innerHTML === ""){
+        esconderMensajeError();
+    }
 }
 
 function validar(textoTarea) {
@@ -88,7 +93,6 @@ function manejarErrores() {
         const textoError = validar(tarea);
         mostrarError(textoError);
     }
-
 }
 
 function agregar(nuevaTarea) {

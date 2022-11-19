@@ -1,16 +1,16 @@
-body{
+body {
     font-family: 'Poppins', sans-serif;
     margin: 0 auto;
     text-align: center;
     background-color: rgb(2, 2, 58);
 }
 
-h1{
+h1 {
     color: white;
 }
 
-#contenedor-errores{
-    background-color:rgb(255, 6, 46);
+#contenedor-errores {
+    background-color: rgb(255, 6, 46);
     border-radius: 10px;
     width: 70%;
     padding: 1rem;
@@ -19,13 +19,13 @@ h1{
     font-weight: bold;
 }
 
-.oculto{
+.oculto {
     display: none;
 }
 
-.input{
+.input {
     width: 450px;
-    height: 60px; 
+    height: 60px;
     margin: 5px;
     padding: 0px 20px;
     border-radius: 10px;
@@ -34,19 +34,22 @@ h1{
     border: none;
     outline: none;
 }
-.boton-agregar{
+
+.boton-agregar {
     width: 50px;
     height: 50px;
     margin: 5px;
     border: none;
     border-radius: 10px;
-    background-color:rgb(255, 6, 46);
-    color: white; 
+    background-color: rgb(255, 6, 46);
+    color: white;
 }
+
 .boton-agregar:hover {
-opacity: 0.9;
+    opacity: 0.9;
 }
-.item-input{
+
+.item-input {
     height: 50px;
     padding: 0px 20px;
     border: 1px solid white;
@@ -54,21 +57,23 @@ opacity: 0.9;
     font-size: 18px;
     color: white;
     background: none;
-    line-height : 25px;
-}
-.item{
-margin-bottom: 10px;
-}
-.boton-editar{
-margin: 0px 5px;
-border: none;
-background: none;
-color: #62d0ff;
-font-size: 1.4rem;
-font-family: Montserrat, sans-serif;
+    line-height: 25px;
 }
 
-.boton-remover{
+.item {
+    margin-bottom: 10px;
+}
+
+.boton-editar {
+    margin: 0px 5px;
+    border: none;
+    background: none;
+    color: #62d0ff;
+    font-size: 1.4rem;
+    font-family: Montserrat, sans-serif;
+}
+
+.boton-remover {
     height: 50px;
     width: 50px;
     margin: 0px 5px;
@@ -76,9 +81,9 @@ font-family: Montserrat, sans-serif;
     border-radius: 10px;
     background-color: rgb(255, 6, 46);
     color: white;
-    font-size: 20px;  
+    font-size: 20px;
 }
 
-#container{
+#container {
     margin: 0 8%;
 }

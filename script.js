@@ -53,60 +53,18 @@ function crearBotonRemover() {
     let botonRemover = document.createElement("button");
     botonRemover.innerHTML = "<i class='fas fa-trash'></i>";
     botonRemover.classList.add("boton-remover");
-    botonRemover.onclick = eliminarContenedorTarea;
+    botonRemover.onclick = eliminarTarea;
 
     return botonRemover;
 }
 
-function eliminarContenedorTarea() {
+function eliminarTarea() {
     const $seccionTareas = document.querySelector("#contenedor-tareas");
 
     this.parentNode.remove();
     if ($seccionTareas.innerHTML === ""){
         esconderMensajeError();
     }
-}
-
-function validar(textoTarea) {
-    if (textoTarea === "") {
-        return "El campo no debe estar vacío."
-    } else if (textoTarea.length > 30) {
-        return "El campo debe tener menos que 30 carácteres."
-    } else {
-        return "";
-    }
-}
-
-let $input = document.querySelector(".input");
-
-const $agregar = document.querySelector(".boton-agregar");
-$agregar.onclick = manejarErrores;
-
-function manejarErrores() {
-    const tarea = $input.value;
-    const cumpleRequisitos = validar(tarea) === "";
-
-    if (cumpleRequisitos) {
-        esconderMensajeError();
-        agregar(tarea);
-    } else {
-        const textoError = validar(tarea);
-        mostrarError(textoError);
-    }
-}
-
-function agregar(nuevaTarea) {
-    const $contenedorTareaNueva = crearContenedor();
-    const $input = crearInput(nuevaTarea);
-    const $botonEditar = crearBotonEditar($input);
-    const $botonRemover = crearBotonRemover();
-
-    $contenedorTareaNueva.appendChild($input);
-    $contenedorTareaNueva.appendChild($botonEditar);
-    $contenedorTareaNueva.appendChild($botonRemover);
-
-    const $contenedorTareas = document.querySelector("#contenedor-tareas");
-    $contenedorTareas.appendChild($contenedorTareaNueva);
 }
 
 function mostrarError(error) {
@@ -125,9 +83,49 @@ function vaciarErroresAnteriores(){
     $contenedorErrores.innerHTML = "";
 }
 
+function validar(textoTarea) {
+    if (textoTarea === "") {
+        return "El campo no debe estar vacío."
+    } else if (textoTarea.length > 30) {
+        return "El campo debe tener menos que 30 carácteres."
+    } else {
+        return "";
+    }
+}
+
+function agregar(nuevaTarea) {
+    const $contenedorTareaNueva = crearContenedor();
+    const $input = crearInput(nuevaTarea);
+    const $botonEditar = crearBotonEditar($input);
+    const $botonRemover = crearBotonRemover();
+
+    $contenedorTareaNueva.appendChild($input);
+    $contenedorTareaNueva.appendChild($botonEditar);
+    $contenedorTareaNueva.appendChild($botonRemover);
+
+    const $contenedorTareas = document.querySelector("#contenedor-tareas");
+    $contenedorTareas.appendChild($contenedorTareaNueva);
+}
+
 function esconderMensajeError (){
     const $contenedorErrores = document.querySelector("#contenedor-errores");
     $contenedorErrores.classList.add("oculto");
 }
 
+function manejarErrores() {
+    const tarea = $input.value;
+    const cumpleRequisitos = validar(tarea) === "";
 
+    if (cumpleRequisitos) {
+        esconderMensajeError();
+        agregar(tarea);
+    } else {
+        const textoError = validar(tarea);
+        mostrarError(textoError);
+    }
+}
+
+let $input = document.querySelector(".input");
+
+const $agregar = document.querySelector(".boton-agregar");
+$agregar.onclick = manejarErrores;

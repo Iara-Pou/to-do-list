@@ -87,4 +87,7 @@ h1 {
 #container {
     margin: 0 8%;
 }
+
+#contenedor-tareas{
+    margin: 1rem auto;
 }

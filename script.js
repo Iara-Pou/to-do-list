@@ -112,12 +112,17 @@ function esconderMensajeError (){
     $contenedorErrores.classList.add("oculto");
 }
 
+function vaciarInput(){
+    $input.value="";
+}
+
 function manejarErrores() {
     const tarea = $input.value;
     const cumpleRequisitos = validar(tarea) === "";
 
     if (cumpleRequisitos) {
         esconderMensajeError();
+        vaciarInput();
         agregar(tarea);
     } else {
         const textoError = validar(tarea);

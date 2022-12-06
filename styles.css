@@ -13,10 +13,6 @@ h1 {
     margin: 0 8%;
 }
 
-#contenedor-tareas{
-    margin: 1rem auto;
-}
-
 #contenedor-errores {
     background-color: rgb(255, 6, 46);
     border-radius: 10px;
@@ -65,7 +61,7 @@ h1 {
 }
 
 .item {
-    margin-bottom: 1rem;
+    margin: 1rem;
 }
 
 .boton-editar, .boton-remover {

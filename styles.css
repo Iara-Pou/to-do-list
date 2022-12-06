@@ -62,26 +62,23 @@ h1 {
     margin-bottom: 10px;
 }
 
-.boton-editar {
-    height: 3em;
-    width: 3em;
-    margin: 0px 0.5%;
+.boton-editar, .boton-remover {
+    height: 3rem;
+    width: 3rem;
+    margin: 0 0.5%;
     border: none;
+    font-size: 1.4rem;
+}
+
+.boton-editar { 
     background: none;
     color: #62d0ff;
-    font-size: 1.4rem;
-    font-family: Montserrat, sans-serif;
 }
 
 .boton-remover {
-    height: 3em;
-    width: 3em;
-    margin: 0px 0.5%;
-    border: none;
     border-radius: 10px;
     background-color: rgb(255, 6, 46);
     color: white;
-    font-size: 20px;
 }
 
 #container {

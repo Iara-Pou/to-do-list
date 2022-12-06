@@ -9,6 +9,14 @@ h1 {
     color: white;
 }
 
+#contenedor {
+    margin: 0 8%;
+}
+
+#contenedor-tareas{
+    margin: 1rem auto;
+}
+
 #contenedor-errores {
     background-color: rgb(255, 6, 46);
     border-radius: 10px;
@@ -42,14 +50,13 @@ h1 {
     background-color: rgb(255, 6, 46);
     color: white;
 }
-
 #boton-agregar:hover {
     opacity: 0.9;
 }
 
 .item-input {
     height: 50px;
-    padding: 0px 20px;
+    padding: 0 20px;
     border: 1px solid white;
     border-radius: 5px;
     font-size: 18px;
@@ -59,7 +66,7 @@ h1 {
 }
 
 .item {
-    margin-bottom: 10px;
+    margin-bottom: 1rem;
 }
 
 .boton-editar, .boton-remover {
@@ -81,10 +88,4 @@ h1 {
     color: white;
 }
 
-#container {
-    margin: 0 8%;
-}
 
-#contenedor-tareas{
-    margin: 1rem auto;
-}

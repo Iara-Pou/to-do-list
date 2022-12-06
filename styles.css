@@ -15,10 +15,10 @@ h1 {
 
 #contenedor-errores {
     background-color: rgb(255, 6, 46);
-    border-radius: 10px;
-    width: 70%;
-    padding: 1em;
-    margin: 1em auto;
+    border-radius: 1em;
+    width: 80%;
+    padding: 0.5em;
+    margin: 1.5em auto;
     color: white;
     font-weight: bold;
 }
@@ -36,6 +36,20 @@ h1 {
     border: none;
 }
 
+.item {
+    margin: 1rem;
+}
+
+.item-input {
+    background: none;
+    height: 3rem;
+    padding: 0 1em;
+    border: 1px solid white;
+    border-radius: 0.5rem;
+    font-size: 1.2rem;
+    color: white;
+}
+
 #boton-agregar {
     width: 4em;
     height: 4em;
@@ -47,21 +61,6 @@ h1 {
 }
 #boton-agregar:hover {
     opacity: 0.9;
-}
-
-.item-input {
-    height: 50px;
-    padding: 0 20px;
-    border: 1px solid white;
-    border-radius: 5px;
-    font-size: 18px;
-    color: white;
-    background: none;
-    line-height: 25px;
-}
-
-.item {
-    margin: 1rem;
 }
 
 .boton-editar, .boton-remover {

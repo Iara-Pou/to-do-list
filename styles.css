@@ -77,4 +77,14 @@ h1 {
     color: white;
 }
 
+@media all and (max-width: 768px) and (min-width:501px) {
+    .item-input{
+        width: 70%;
+    }
+}
 
+@media all and (max-width: 500px) {
+    .item-input{
+        width: 65%;
+    }
+}

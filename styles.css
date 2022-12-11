@@ -13,6 +13,10 @@ h1 {
     color: white;
 }
 
+#contenedor {
+    margin: 0 8%;
+}
+
 #contenedor-errores {
     background-color: rgb(255, 6, 46);
     border-radius: 1em;
@@ -93,3 +97,4 @@ h1 {
         width: 65%;
     }
 }
+

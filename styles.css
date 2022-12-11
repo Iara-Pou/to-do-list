@@ -1,16 +1,11 @@
 body {
     font-family: 'Poppins', sans-serif;
-    margin: 0 auto;
     text-align: center;
     background-color: rgb(2, 2, 58);
 }
 
 h1 {
     color: white;
-}
-
-#contenedor {
-    margin: 0 8%;
 }
 
 #contenedor-errores {
@@ -31,7 +26,6 @@ h1 {
     width: 70%;
     padding: 1em 1.5em;
     border-radius: 0.5em;
-    background-color: white;
     font-size: 1.25rem;
     border: none;
 }
@@ -41,13 +35,14 @@ h1 {
 }
 
 .item-input {
-    background: none;
+    width: 35%;
     height: 3rem;
+    background: none;
+    color: white;
+    font-size: 1.2rem;
     padding: 0 1em;
     border: 1px solid white;
     border-radius: 0.5rem;
-    font-size: 1.2rem;
-    color: white;
 }
 
 #boton-agregar {

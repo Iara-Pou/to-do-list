@@ -1,7 +1,12 @@
 body {
     font-family: 'Poppins', sans-serif;
-    text-align: center;
     background-color: rgb(2, 2, 58);
+}
+
+#contenedor{
+    max-width: 125rem;
+    text-align: center;
+    margin: 0 auto;
 }
 
 h1 {
